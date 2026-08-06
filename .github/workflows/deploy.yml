@@ -30,6 +30,24 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t $IMAGE_NAME:latest .
-        
+
       - name: Push Docker image
         run: docker push $IMAGE_NAME:latest
+
+      - name: Deploy to EC2
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "${{ secrets.EC2_HOST }}" >> ~/.ssh/known_hosts
+
+          ssh ec2-user@${{ secrets.EC2_HOST }} << EOF
+            docker pull $IMAGE_NAME:latest
+            docker stop portfolio || true
+            docker rm portfolio || true
+            docker run -d \
+              --name portfolio \
+              --restart unless-stopped \
+              -p 80:80 \
+              $IMAGE_NAME:latest
+          EOF

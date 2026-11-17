@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f8f4">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <title>Manish Kumawat — Software Development Intern at TechSode</title>
   <meta name="description" content="Manish Kumawat — Software Development Intern at TechSode, MERN Stack Developer, AWS enthusiast, and full-stack web developer focused on real-world projects, SEO, and cloud technologies.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,16 +28,16 @@
       --glass-fill-hover: rgba(255, 255, 255, .54);
       --glass-edge: rgba(255, 255, 255, .96);
       --glass-edge-hover: #fff;
-      --glass-tint: rgba(147, 168, 255, .16);
-      --glass-shadow: inset 0 1px 0 rgba(255,255,255,.99), 0 0 13px rgba(107,162,255,.32), 0 0 30px rgba(161,117,255,.26), 0 0 48px rgba(255,131,190,.22), 0 18px 34px rgba(65,75,130,.14);
-      --glass-shadow-hover: inset 0 1px 0 #fff, 0 0 17px rgba(107,162,255,.4), 0 0 36px rgba(161,117,255,.32), 0 0 56px rgba(255,131,190,.28), 0 20px 38px rgba(65,75,130,.17);
+      --glass-tint: rgba(165, 220, 178, .16);
+      --glass-shadow: inset 0 1px 0 rgba(255,255,255,.99), 0 0 13px rgba(165,220,178,.32), 0 0 30px rgba(165,220,178,.26), 0 0 48px rgba(165,220,178,.22), 0 18px 34px rgba(65,85,70,.14);
+      --glass-shadow-hover: inset 0 1px 0 #fff, 0 0 17px rgba(165,220,178,.4), 0 0 36px rgba(165,220,178,.32), 0 0 56px rgba(165,220,178,.28), 0 20px 38px rgba(65,85,70,.17);
       --glass-button-fill: rgba(255,255,255,.3);
       --glass-button-fill-hover: rgba(255,255,255,.42);
       --glass-button-edge: rgba(255,255,255,.99);
       --glass-button-edge-hover: #fff;
-      --glass-control-shadow: 0 0 11px rgba(100,164,255,.38), 0 0 24px rgba(144,112,255,.32), 0 0 36px rgba(213,133,255,.18), 0 8px 20px rgba(65,75,130,.15);
-      --glass-control-shadow-hover: 0 0 14px rgba(100,164,255,.48), 0 0 30px rgba(144,112,255,.42), 0 0 44px rgba(213,133,255,.26), 0 10px 24px rgba(65,75,130,.18);
-      --glass-control-shadow-press: inset 0 0 0 1px rgba(255,255,255,.98), 0 0 14px rgba(100,164,255,.58), 0 0 28px rgba(144,112,255,.5), 0 0 40px rgba(213,133,255,.32), 0 2px 8px rgba(65,75,130,.14);
+      --glass-control-shadow: 0 0 11px rgba(165,220,178,.38), 0 0 24px rgba(165,220,178,.32), 0 0 36px rgba(165,220,178,.18), 0 8px 20px rgba(65,85,70,.15);
+      --glass-control-shadow-hover: 0 0 14px rgba(165,220,178,.48), 0 0 30px rgba(165,220,178,.42), 0 0 44px rgba(165,220,178,.26), 0 10px 24px rgba(65,85,70,.18);
+      --glass-control-shadow-press: inset 0 0 0 1px rgba(255,255,255,.98), 0 0 14px rgba(165,220,178,.58), 0 0 28px rgba(165,220,178,.5), 0 0 40px rgba(165,220,178,.32), 0 2px 8px rgba(65,85,70,.14);
       --body: "DM Sans", Arial, sans-serif;
       --display: "Bricolage Grotesque", Arial, sans-serif;
       --page-width: 1120px;
@@ -287,9 +288,9 @@
       border-radius: inherit;
       background:
         linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.3) 12%, transparent 38%),
-        radial-gradient(ellipse at 12% 18%, rgba(108,158,255,.2), transparent 44%),
-        radial-gradient(ellipse at 88% 85%, rgba(255,143,190,.18), transparent 42%),
-        radial-gradient(ellipse at 90% 8%, rgba(164,125,255,.15), transparent 38%),
+        radial-gradient(ellipse at 12% 18%, rgba(165,220,178,.2), transparent 44%),
+        radial-gradient(ellipse at 88% 85%, rgba(165,220,178,.18), transparent 42%),
+        radial-gradient(ellipse at 90% 8%, rgba(165,220,178,.15), transparent 38%),
         radial-gradient(ellipse at center, transparent 58%, var(--glass-tint) 100%);
       box-shadow: inset 0 1px 0 #fff, inset 1px 0 0 rgba(255,255,255,.72);
       content: "";
@@ -331,6 +332,8 @@
     }
     .nav-toggle { transition: box-shadow .18s ease; }
     .project-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
+    .real-world-project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 30px; }
+    .project-card.real-world-project-card { grid-template-columns: minmax(0, 1fr); grid-template-areas: "body"; align-items: stretch; gap: 12px; }
     .project-card {
       display: grid;
       min-width: 0;
@@ -378,8 +381,8 @@
     .tech-arrow { color: var(--accent); font-size: 18px; }
     .pipeline-art { position: relative; --pipeline-arrow-gap: 8px; }
     .pipeline-art .tech-block {
-      --pipeline-pulse-border: rgba(139,145,255,.96);
-      --pipeline-pulse-shadow: 0 0 0 1px rgba(139,145,255,.24), 0 0 12px rgba(111,145,255,.42), 0 0 20px rgba(158,116,255,.3);
+      --pipeline-pulse-border: rgba(126,207,157,.98);
+      --pipeline-pulse-shadow: 0 0 0 1px rgba(126,207,157,.22), 0 0 12px rgba(102,199,139,.38), 0 0 20px rgba(113,208,157,.26);
       animation: pipeline-card-pulse 5s linear infinite;
     }
     .pipeline-art .tech-block:nth-child(3) { animation-delay: .9s; }
@@ -392,8 +395,8 @@
     .workflow-art { --workflow-gap: 8px; }
     .workflow-art .workflow-node {
       position: relative;
-      --pipeline-pulse-border: rgba(139,145,255,.96);
-      --pipeline-pulse-shadow: 0 0 0 1px rgba(139,145,255,.24), 0 0 12px rgba(111,145,255,.42), 0 0 20px rgba(158,116,255,.3);
+      --pipeline-pulse-border: rgba(126,207,157,.98);
+      --pipeline-pulse-shadow: 0 0 0 1px rgba(126,207,157,.22), 0 0 12px rgba(102,199,139,.38), 0 0 20px rgba(113,208,157,.26);
       animation: pipeline-card-pulse 5s linear infinite;
     }
     .workflow-art .workflow-node--stage-1 { animation-delay: .9s; }
@@ -414,8 +417,8 @@
       transform: translate(-50%, -50%);
       border-radius: 50%;
       opacity: 0;
-      background: radial-gradient(circle at 35% 35%, #fff 0 8%, #91baff 24%, #7488ff 62%, #a878ff 100%);
-      box-shadow: 0 0 5px rgba(255,255,255,.95), 0 0 12px rgba(88,139,255,.95), 0 0 20px rgba(145,103,255,.82);
+      background: radial-gradient(circle at 35% 35%, #fff 0 8%, #c9ebd0 24%, #a9ddb8 62%, #8fcda0 100%);
+      box-shadow: 0 0 5px rgba(255,255,255,.95), 0 0 12px rgba(169,221,184,.95), 0 0 20px rgba(143,205,160,.82);
       animation: workflow-flow-first 5s linear infinite;
       animation-delay: var(--pipeline-stagger);
       pointer-events: none;
@@ -430,7 +433,7 @@
       width: 20px;
       height: 3px;
       transform: translateY(-50%);
-      background: linear-gradient(90deg, transparent, rgba(132,144,255,.22), rgba(104,166,255,.72));
+      background: linear-gradient(90deg, transparent, rgba(169,221,184,.22), rgba(143,205,160,.72));
       content: "";
       filter: blur(1.5px);
     }
@@ -468,8 +471,8 @@
       transform: translate(-50%, -50%);
       border-radius: 50%;
       opacity: 0;
-      background: radial-gradient(circle at 35% 35%, #fff 0 8%, #91baff 24%, #7488ff 62%, #a878ff 100%);
-      box-shadow: 0 0 5px rgba(255,255,255,.95), 0 0 12px rgba(88,139,255,.95), 0 0 20px rgba(145,103,255,.82);
+      background: radial-gradient(circle at 35% 35%, #fff 0 8%, #c9ebd0 24%, #a9ddb8 62%, #8fcda0 100%);
+      box-shadow: 0 0 5px rgba(255,255,255,.95), 0 0 12px rgba(169,221,184,.95), 0 0 20px rgba(143,205,160,.82);
       animation: pipeline-flow-first 5s linear infinite;
       animation-delay: var(--pipeline-stagger);
       pointer-events: none;
@@ -483,7 +486,7 @@
       width: 20px;
       height: 3px;
       transform: translateY(-50%);
-      background: linear-gradient(90deg, transparent, rgba(132,144,255,.22), rgba(104,166,255,.72));
+      background: linear-gradient(90deg, transparent, rgba(169,221,184,.22), rgba(143,205,160,.72));
       content: "";
       filter: blur(1.5px);
     }
@@ -541,6 +544,27 @@
     .info-card { min-height: 82px; padding: 13px 15px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
     .info-label { color: var(--faint); font-size: 11px; }
     .info-value { margin-top: 6px; font-size: 14px; font-weight: 700; }
+    .experience-card { margin-top: 14px; padding: 18px; border-radius: 12px; }
+    .experience-role-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+    .experience-company-header { display: flex; min-width: 0; align-items: center; gap: 12px; }
+    .experience-logo-tile { display: grid; width: 56px; height: 56px; flex: none; place-items: center; padding: 8px; border-radius: 12px; background: #fff; box-shadow: 0 2px 6px rgba(27,55,37,.06); }
+    .experience-logo { display: block; width: 40px; height: 40px; object-fit: contain; }
+    .experience-company { margin: 0; color: var(--ink); font-family: var(--display); font-size: 17px; font-weight: 700; line-height: 1.35; }
+    .experience-role { margin: 3px 0 0; color: var(--muted); font-size: 14px; font-weight: 600; }
+    .experience-status { display: inline-flex; align-items: center; gap: 7px; padding: 5px 9px; border-radius: 999px; background: var(--accent-pale); color: var(--accent-dark); font-size: 12px; font-weight: 700; }
+    .experience-status-dot { width: 8px; height: 8px; flex: none; border-radius: 50%; background: #75bf8b; }
+    .experience-details { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; color: var(--faint); font-size: 13px; }
+    .experience-description { max-width: 900px; margin: 10px 0 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .experience-link { margin-top: 12px; cursor: pointer; }
+    .internship-dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+    .internship-dialog-close { display: grid; width: 38px; height: 38px; flex: none; place-items: center; padding: 0; border: 1px solid var(--glass-button-edge); border-radius: 8px; background: var(--glass-button-fill); color: var(--accent-dark); font-size: 25px; line-height: 1; cursor: pointer; }
+    .internship-dialog-meta { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+    .internship-work-heading { margin: 18px 0 0; font-family: var(--display); font-size: 17px; font-weight: 700; }
+    .internship-work-list { display: grid; gap: 9px; margin: 10px 0 0; padding: 0; list-style: none; }
+    .internship-work-list li { padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.42); color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .internship-work-list strong { color: var(--ink); }
+    .internship-dialog.info-card.glass-card { position: fixed; inset: 0; width: min(720px, calc(100% - 32px)); max-width: none; max-height: min(700px, calc(100vh - 32px)); margin: auto; padding: 22px; overflow: auto; }
+    .internship-dialog::backdrop { background: rgba(35,74,51,.22); backdrop-filter: blur(3px); }
 
     .timeline { max-width: 920px; margin-top: 14px; }
     .timeline-item {
@@ -710,6 +734,7 @@
       .pipeline-art { --pipeline-arrow-gap: 5px; }
       .workflow-art { --workflow-gap: 5px; }
       .tech-block { min-width: 36px; font-size: 10px; }
+      .real-world-project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 560px) {
       html { scroll-padding-top: 64px; }
@@ -732,6 +757,7 @@
       .section-heading { font-size: 31px; }
       .section-description { margin-bottom: 16px; font-size: 14px; }
       .project-grid { margin-top: 20px; }
+      .real-world-project-grid { grid-template-columns: 1fr; margin-top: 20px; }
       .project-card { grid-template-columns: 1fr; grid-template-areas: "body" "art"; gap: 18px; padding: 16px; }
       .project-art { min-height: 142px; padding: 13px; }
       .project-body { padding: 0; }
@@ -816,13 +842,13 @@
           <svg class="hero-mesh" viewBox="0 0 440 280" fill="none" aria-hidden="true">
             <defs>
               <linearGradient id="hero-flow-gradient" x1="5" y1="219" x2="436" y2="4" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#7488ff" stop-opacity=".12"/>
-                <stop offset="1" stop-color="#91baff" stop-opacity=".9"/>
+                <stop stop-color="#a9ddb8" stop-opacity=".12"/>
+                <stop offset="1" stop-color="#c9ebd0" stop-opacity=".9"/>
               </linearGradient>
               <radialGradient id="hero-flow-dot-gradient">
                 <stop stop-color="#fff"/>
-                <stop offset=".45" stop-color="#91baff"/>
-                <stop offset="1" stop-color="#7488ff"/>
+                <stop offset=".45" stop-color="#c9ebd0"/>
+                <stop offset="1" stop-color="#a9ddb8"/>
               </radialGradient>
               <filter id="hero-flow-glow" x="-100%" y="-100%" width="300%" height="300%">
                 <feGaussianBlur stdDeviation="2.5" result="blur"/>
@@ -859,6 +885,43 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 class="section-heading" id="experience-title">Experience</h2>
+        <article class="info-card glass-card reveal experience-card">
+          <div class="experience-role-row">
+            <div class="experience-company-header">
+              <span class="experience-logo-tile"><img class="experience-logo" src="/techsode-logo-mark.png" alt=""></span>
+              <div>
+                <h3 class="experience-company">TechSode IT Solutions Pvt. Ltd.</h3>
+                <p class="experience-role">MERN Stack Developer Intern</p>
+              </div>
+            </div>
+            <span class="experience-status"><span class="experience-status-dot" aria-hidden="true"></span>Currently Working</span>
+          </div>
+          <div class="experience-details"><span>September 2026 – Present</span><span>Jaipur, Rajasthan</span></div>
+          <button class="project-link glass-control experience-link" id="internshipDetailsButton" type="button" aria-haspopup="dialog" aria-controls="internshipDialog">View Internship Details <span aria-hidden="true">↗</span></button>
+        </article>
+      </div>
+      <dialog class="info-card glass-card internship-dialog" id="internshipDialog" aria-labelledby="internshipDialogTitle" aria-describedby="internshipDialogDescription">
+        <div class="internship-dialog-header">
+          <h2 class="section-heading" id="internshipDialogTitle">My Internship at TechSode</h2>
+          <button class="glass-control internship-dialog-close" id="internshipDialogClose" type="button" aria-label="Close internship details">×</button>
+        </div>
+        <p class="internship-dialog-meta">MERN Stack Developer Intern</p>
+        <p class="internship-dialog-meta">TechSode IT Solutions Pvt. Ltd. · Jaipur, Rajasthan</p>
+        <p class="internship-dialog-meta">6-month internship · September 2026 – Present</p>
+        <p class="experience-description" id="internshipDialogDescription">I work on real-world projects at TechSode, from building websites with HTML, CSS, and JavaScript to contributing to full-stack MERN applications. I’m also gaining hands-on experience with web hosting, server operations, and FTP file management.</p>
+        <h3 class="internship-work-heading">What I’m working on</h3>
+        <ul class="internship-work-list">
+          <li><strong>Web Development</strong> — Build and update websites using HTML, CSS, and JavaScript.</li>
+          <li><strong>Full-Stack MERN Development</strong> — Work with MongoDB, Express.js, React, and Node.js, including building and updating React components for the TechSode marketplace.</li>
+          <li><strong>WordPress &amp; SEO</strong> — Built the Naaz Textiles catalogue website in WordPress and the Pull N Dry website, where I continue to work on SEO.</li>
+          <li><strong>Hosting, Servers &amp; FTP</strong> — Help run and maintain websites on servers and manage website files via FTP.</li>
+        </ul>
+      </dialog>
     </section>
 
     <section class="section" id="projects" aria-labelledby="projects-title">
@@ -903,6 +966,38 @@
               <p class="project-desc">Completed a Microsoft Azure with DevOps internship at GRRAS Solutions Pvt. Ltd., strengthening practical knowledge of Azure, Cloud Computing, and DevOps.</p>
               <div class="stack-row"><span class="stack-tag">Microsoft Azure</span><span class="stack-tag">Cloud Computing</span><span class="stack-tag">DevOps</span></div>
               <div class="project-actions"><a class="project-link glass-control" href="https://lnkd.in/gkbEt6DP" target="_blank" rel="noopener noreferrer">Verify Certificate <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="real-world-projects" aria-labelledby="real-world-projects-title">
+      <div class="container">
+        <h2 class="section-heading" id="real-world-projects-title">Real-World Projects</h2>
+        <div class="real-world-project-grid">
+          <article class="project-card glass-card reveal real-world-project-card">
+            <div class="project-body">
+              <h3 class="project-title">Naaz Textiles</h3>
+              <div class="stack-row"><span class="stack-tag">WordPress Development</span></div>
+              <p class="project-desc">Built the complete catalogue website in WordPress.</p>
+              <div class="project-actions"><a class="project-link glass-control" href="https://naaztextiles.com/" target="_blank" rel="noopener noreferrer">View Live Site <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="project-card glass-card reveal reveal-delay-1 real-world-project-card">
+            <div class="project-body">
+              <h3 class="project-title">Pull N Dry</h3>
+              <div class="stack-row"><span class="stack-tag">Website Development &amp; SEO</span></div>
+              <p class="project-desc">Built the website and continue to work on its SEO.</p>
+              <div class="project-actions"><a class="project-link glass-control" href="https://pullndry.co.in/" target="_blank" rel="noopener noreferrer">View Live Site <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="project-card glass-card reveal reveal-delay-2 real-world-project-card">
+            <div class="project-body">
+              <h3 class="project-title">TechSode</h3>
+              <div class="stack-row"><span class="stack-tag">React Development &amp; UI/UX</span></div>
+              <p class="project-desc">Worked on React components and contributed to UI/UX improvements for the software marketplace.</p>
+              <div class="project-actions"><a class="project-link glass-control" href="https://techsode.com/" target="_blank" rel="noopener noreferrer">View Live Site <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
         </div>
@@ -1010,6 +1105,9 @@
     (() => {
       const navToggle = document.getElementById("navToggle");
       const navLinks = document.getElementById("navLinks");
+      const internshipDetailsButton = document.getElementById("internshipDetailsButton");
+      const internshipDialog = document.getElementById("internshipDialog");
+      const internshipDialogClose = document.getElementById("internshipDialogClose");
       const sections = [...document.querySelectorAll("main > section[id]")];
 
       const closeMenu = () => {
@@ -1025,11 +1123,17 @@
         navLinks.classList.toggle("is-open", !isOpen);
       });
 
+      internshipDetailsButton.addEventListener("click", () => internshipDialog.showModal());
+      internshipDialogClose.addEventListener("click", () => internshipDialog.close());
+
       navLinks.addEventListener("click", event => {
         if (event.target.closest("a")) closeMenu();
       });
       document.addEventListener("keydown", event => {
-        if (event.key === "Escape") closeMenu();
+        if (event.key === "Escape") {
+          closeMenu();
+          if (internshipDialog.open) internshipDialog.close();
+        }
       });
       document.addEventListener("click", event => {
         if (!navLinks.contains(event.target) && !navToggle.contains(event.target)) closeMenu();
